@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "softq-food": {
+      "hosting": {
+        "app": [
+          "softq-food"
+        ]
+      }
+    }
+  }
+}

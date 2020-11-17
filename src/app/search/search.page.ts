@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-search',
+  templateUrl: './search.page.html',
+  styleUrls: ['./search.page.scss'],
 })
-export class Tab1Page {
-
+export class SearchPage implements OnInit {
   searchValue = '';
+
+  ngOnInit() {}
 
   constructor(private router: Router) { }
 

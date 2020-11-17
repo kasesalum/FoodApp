@@ -1,0 +1,79 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Your cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <!-- <div style="text-align: center;">
+      <img [src]="receivedData.img" />
+    </div> -->
+    <ion-card-content>
+      <div *ngFor="let item of items">
+        <ion-row>
+          <ion-col style="text-decoration: underline; font-weight: bold;">
+            Producto
+          </ion-col>
+          <ion-col size="3" style="text-decoration: underline; font-weight: bold;">
+            Precio
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="cursor: default;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;">
+            {{item.name}}
+          </ion-col>
+          <ion-col size="3">
+            ${{item.price}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Cantidad: {{item.quantity}}
+          </ion-col>
+          <ion-col class="ion-align-items-center detail-card-footer">
+            <ion-chip button (click)="addToCart(item)" tappable>
+              <ion-icon name="add-circle" color="success"></ion-icon>
+            </ion-chip>
+            <ion-chip button (click)="removeFromCart(item)" tappable>
+              <ion-icon name="remove-circle" color="danger"></ion-icon>
+            </ion-chip>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-button expand="block" (click)="confirmBuy()" style="margin-top: 20px;" color="success">Confirm order
+      </ion-button>
+    </ion-card-content>
+
+    <ion-footer>
+      <!-- <ion-row class="ion-align-items-center detail-card-footer">
+        <ion-col>
+          <ion-chip>
+            <ion-icon name="heart" color="danger"></ion-icon>
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip>
+            <ion-icon name="navigate" color="secondary"></ion-icon>
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip>
+            <ion-icon name="call" color="success"></ion-icon>
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip>
+            <ion-icon name="share-social" color="tertiary"></ion-icon>
+          </ion-chip>
+        </ion-col>
+      </ion-row> -->
+    </ion-footer>
+  </ion-card>
+</ion-content>

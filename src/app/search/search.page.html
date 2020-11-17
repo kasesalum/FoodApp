@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="center">
+    <ion-img style="height: 80px; width: 100%;" src="../../assets/icon/favicon.png"></ion-img>
+    <ion-searchbar [(ngModel)]="searchValue" placeholder="Qué estás buscando?"></ion-searchbar>
+    <ion-text style="padding-left: 12px; padding-right: 12px;">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      Comidas, bebidas y comercios
+    </ion-text>
+    <ion-button expand="block" (click)="openResultsWithQueryParams()" style="margin-top: 20px;">Buscar</ion-button>
+  </div>
+
+</ion-content>
