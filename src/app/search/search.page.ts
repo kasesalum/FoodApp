@@ -19,7 +19,7 @@ export class SearchPage implements OnInit {
         search: this.searchValue === '' ? 'all' : this.searchValue
       }
     };
-    this.router.navigate(['results'], navigationExtras);
+    this.router.navigate(['shops'], navigationExtras);
   }
 
 }
