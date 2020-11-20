@@ -18,6 +18,8 @@ exports.config = {
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
+  directConnect: false,
+  seleniumAddress: 'http://localhost:4445/wd/hub',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
