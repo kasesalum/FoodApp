@@ -8,6 +8,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card>   
+    <ion-searchbar [(ngModel)]="searchValue" placeholder="Search items..."></ion-searchbar>
+    
+    <ion-button expand="block" (click)="openResultsWithQueryParams()" style="margin-top: 20px;">Search</ion-button>
+  </ion-card>
   <ion-card>
     <!-- <div style="text-align: center;">
       <img [src]="receivedData.img" />
@@ -39,7 +44,7 @@
       <ion-card-title>{{receivedData.name}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <div *ngFor="let m of receivedData.offers">
+      <div *ngFor="let m of offers">
         <ion-row>
           <ion-col style="text-decoration: underline; font-weight: bold;">
             Producto

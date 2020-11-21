@@ -13,8 +13,11 @@ export class DetailsPage implements OnInit {
 
   receivedData = { 'offers': []}
   selectedMenuItems: MenuItemCart[] = [];
+  searchValue = '';
+  offers = []
   
   itemsToBuy = [];
+  notFoundError = false; // not implemented
 
   constructor(
     private route: ActivatedRoute, 
@@ -26,6 +29,7 @@ export class DetailsPage implements OnInit {
         if (this.router.getCurrentNavigation()) {
           this.receivedData = this.router.getCurrentNavigation().extras.state.selected;
           console.log('received data', this.receivedData);
+          this.offers = this.receivedData.offers;
         }
       });
     } catch (e) {
@@ -92,6 +96,26 @@ export class DetailsPage implements OnInit {
 			}
     };
 		this.navCtrl.navigateForward(['cart'], navigationExtras);
+  }
+
+  openResultsWithQueryParams() {
+    if (this.searchValue !== '') {
+      this.offers = []
+      this.receivedData.offers.forEach(element => {
+        const name = element.name.toLowerCase();
+        if (name.includes(this.searchValue.toLowerCase())) {
+          console.log('pushed', element);
+          this.offers.push(element);
+        }
+      })
+      if (this.offers.length == 0) {
+        this.notFoundError = true;
+      }
+    } else {
+      this.offers = this.receivedData.offers;
+    }
+    console.log("offers", this.offers);
+    
   }
   /**
 
