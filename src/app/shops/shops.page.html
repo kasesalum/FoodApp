@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Resultados</ion-title>
+    <ion-title class="shops-title">Shops</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,14 +12,14 @@
    
     <ion-list>
       <ion-list-header>
-        <ion-label>Search: {{searchFilter}}</ion-label>
+        <ion-label class="filter">Search: {{searchFilter}}</ion-label>
         
       </ion-list-header>
       <ion-item detail button (click)="detailsComponent(i)" *ngFor="let i of items">
         <ion-avatar slot="start">
           <img src="../../assets/delivery-boy.webp">
         </ion-avatar>
-        <ion-label>
+        <ion-label class="shop-result">
           <ion-text color="primary">
             <h2>{{i.name}}</h2>
           </ion-text>

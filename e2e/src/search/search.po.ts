@@ -15,5 +15,13 @@ export class SearchPage {
         return element(by.tagName('ion-title'));
     }
 
+    async enterSearchWord(keyword) {
+        await element(by.css('ion-searchbar input')).sendKeys(keyword);
+    }
+
+    async clickSearch() {
+        await element(by.tagName('ion-button')).click();    
+    }
+
 }
   

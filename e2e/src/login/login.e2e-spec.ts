@@ -17,8 +17,8 @@ describe('Login', () => {
       page.navigateTo();
     });
 
-    
-    it('should display log in button', () => {
+    /**
+     *   it('should display log in button', () => {
       expect(page.getButtonText()).toContain('LOG IN');
     });
   
@@ -50,7 +50,9 @@ describe('Login', () => {
       page.clickLogIn();
       expect(page.errorMessage).toBeTruthy;
     });
+     */
+    
+  
   
   });
 
-  
