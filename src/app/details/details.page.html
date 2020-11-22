@@ -69,7 +69,7 @@
             Cantidad: {{m.quantity}}
           </ion-col>
           <ion-col class="ion-align-items-center detail-card-footer">
-            <ion-chip button (click)="addToCart(m)" tappable>
+            <ion-chip class="add" button (click)="addToCart(m)" tappable>
               <ion-icon name="add-circle" color="success"></ion-icon>
             </ion-chip>
             <ion-chip button (click)="removeFromCart(m)" tappable>
@@ -78,7 +78,7 @@
           </ion-col>
         </ion-row>
       </div>
-      <ion-button expand="block" (click)="confirmBuy()" style="margin-top: 20px;" color="success">Add to cart
+      <ion-button class="cart" expand="block" (click)="confirmBuy()" style="margin-top: 20px;" color="success">Add to cart
       </ion-button>
     </ion-card-content>
 

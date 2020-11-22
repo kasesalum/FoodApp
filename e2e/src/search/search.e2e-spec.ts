@@ -1,7 +1,8 @@
 import { ShopsPage } from '../shops/shops.po';
 import { SearchPage } from "./search.po";
 
-describe('Search for stores by address', () => {
+/**
+ * describe('Search for stores by address', () => {
     let page: SearchPage;
     let shopsPage: ShopsPage;
   
@@ -71,3 +72,5 @@ describe('Search for stores by item', () => {
     });
     
 })
+ */
+

@@ -16,6 +16,14 @@ export class DetailsPage {
         await element(by.css('ion-button[class="search"]')).click();    
     }
 
+   clickAddToCart() {
+        element(by.css('ion-button[class="cart"]')).click();    
+    }
+
+    clickAddQuantity() {
+        element.all(by.className('add')).first().click();
+    }
+
     async getDetailName() {
         await element(by.css('ion-col[class="name"]'));
         return element(by.css('ion-col[class="name"]')).getText();

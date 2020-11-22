@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Your cart</ion-title>
+    <ion-title class="cart">Your cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -34,8 +34,8 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            Cantidad: {{item.quantity}}
+          <ion-col class="quantity">
+            Quantity: {{item.quantity}}
           </ion-col>
           <ion-col class="ion-align-items-center detail-card-footer">
             <ion-chip button (click)="addToCart(item)" tappable>
