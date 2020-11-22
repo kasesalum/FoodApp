@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Detalles</ion-title>
+    <ion-title class="details-title">Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +11,7 @@
   <ion-card>   
     <ion-searchbar [(ngModel)]="searchValue" placeholder="Search items..."></ion-searchbar>
     
-    <ion-button expand="block" (click)="openResultsWithQueryParams()" style="margin-top: 20px;">Search</ion-button>
+    <ion-button class="search" expand="block" (click)="openResultsWithQueryParams()" style="margin-top: 20px;">Search</ion-button>
   </ion-card>
   <ion-card>
     <!-- <div style="text-align: center;">
@@ -54,7 +54,7 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col style="cursor: default;
+          <ion-col class="name" style="cursor: default;
           text-overflow: ellipsis;
           white-space: nowrap;
           overflow: hidden;">

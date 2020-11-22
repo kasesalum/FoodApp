@@ -20,4 +20,8 @@ export class ShopsPage {
         await element.all(by.tagName('ion-item')).all(by.className('shop-result'));
         return element.all(by.tagName('ion-item')).all(by.className('shop-result')).getText();
     }
+
+    async clickOnShop() {
+        await element.all(by.css('ion-item detail button')).first().click();
+    }
 }
